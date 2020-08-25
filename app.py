@@ -59,9 +59,15 @@ class StartHandler(tornado.web.RequestHandler):
         self.write("ok")
 
 
+class Printl(tornado.web.RequestHandler):
+    def get(self):
+        self.render("print.html")
+
+
 settings = {
     'debug': False,
-    'template_path': 'templates'
+    'template_path': 'templates',
+    'static_path': 'static'
 }
 
 
@@ -70,6 +76,7 @@ def make_app():
         (r"/webSocket", MyWebSocketHandler),
         (r"/", MainHandler),
         (r"/start", StartHandler),
+        (r"/print", Printl),
     ], **settings)
 
 

@@ -1,0 +1,37 @@
+<html> 
+<head> 
+    <script type="text/javascript" src="../static/jquery-3.4.1.min.js"></script> 
+    <script type="text/javascript" src="../static/jquery.PrintArea.js"></script> 
+    <title>jq 套打非税票据</title>
+</head> 
+<body> 
+
+    <div class="my_show"> 
+        <div style="position: absolute; left: 300px; top: 200px;" id="jkr">张浩浩</div> 
+        <div style="position: absolute; left: 900px; top: 200px;" id="kprq">2020-08-24</div>
+
+        <div style="position: absolute; left: 200px; top: 250px;" id="xmmc">067001001 驾驶证工本费</div>
+        <div style="position: absolute; left: 500px; top: 250px;" id="dw">人/证</div>
+        <div style="position: absolute; left: 600px; top: 250px;" id="sl">1</div>
+        <div style="position: absolute; left: 700px; top: 250px;" id="bz">10</div>
+        <div style="position: absolute; left: 800px; top: 250px;" id="je">10.00</div>
+        <div style="position: absolute; left: 400px; top: 400px;" id="jedx">拾元整</div>
+        <div style="position: absolute; left: 900px; top: 400px;" id="jexx">￥10.00</div>
+
+        <div style="position: absolute; left: 300px; top: 450px;" id="content1">业务流水号：22109154878 网点编号：000121</div>
+        <div style="position: absolute; left: 300px; top: 500px;" id="content2">交款人：张浩浩</div>
+
+        <div style="position: absolute; left: 400px; top: 600px;" id="skdw">郑州车辆管理所</div>
+        <div style="position: absolute; left: 800px; top: 600px" id="skr">操作员一</div>
+    </div> 
+
+    <a href="javascript:;" rel="external nofollow" id="print">打印</a> 
+</body> 
+<script type="text/javascript"> 
+    $(document).ready(function() { 
+        $("#print").click(function() { 
+            $(".my_show").printArea() 
+        }) 
+    }); 
+</script> 
+</html>
